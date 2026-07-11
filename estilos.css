@@ -1,0 +1,306 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f3ff;
+    color:#333;
+}
+
+/*================ MENU ================*/
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:#b39ddb;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    z-index:1000;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+}
+
+.logo img{
+    width:90px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd6f4;
+}
+
+/*================ HERO ================*/
+
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(179,157,219,.55),rgba(179,157,219,.55)),
+    url("img/banner.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-texto{
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:22px;
+}
+
+.boton{
+    display:inline-block;
+    padding:15px 40px;
+    background:#ffb6d9;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    font-size:18px;
+    transition:.3s;
+}
+
+.boton:hover{
+    background:white;
+    color:#b39ddb;
+}
+
+/*================ TITULOS ================*/
+
+section h2{
+    text-align:center;
+    color:#9c7ad8;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+/*================ PRODUCTOS ================*/
+
+.productos{
+    padding:90px 5%;
+}
+
+.contenedor-productos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.producto{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.producto:hover{
+    transform:translateY(-10px);
+}
+
+.producto img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.producto h3{
+    margin-top:15px;
+    text-align:center;
+}
+
+.producto p{
+    text-align:center;
+    margin:10px;
+    color:#777;
+}
+
+.producto a{
+    display:block;
+    margin:20px;
+    text-align:center;
+    padding:12px;
+    background:#b39ddb;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.producto a:hover{
+    background:#ffb6d9;
+}
+
+/*================ NOSOTROS ================*/
+
+.nosotros{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.nosotros p{
+    font-size:20px;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/*================ GALERIA ================*/
+
+.galeria{
+    padding:90px 5%;
+}
+
+.galeria-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.galeria-grid img{
+    width:100%;
+    border-radius:18px;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.galeria-grid img:hover{
+    transform:scale(1.05);
+}
+
+/*================ REDES ================*/
+
+.redes{
+    padding:80px;
+    text-align:center;
+}
+
+.iconos{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+.iconos a{
+    width:80px;
+    height:80px;
+    background:#b39ddb;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-decoration:none;
+    font-size:35px;
+    transition:.3s;
+}
+
+.iconos a:hover{
+    background:#ffb6d9;
+    transform:scale(1.15);
+}
+
+/*================ FOOTER ================*/
+
+footer{
+    background:#b39ddb;
+    padding:40px;
+    text-align:center;
+    color:white;
+}
+
+.logo-footer{
+    width:120px;
+    margin-bottom:20px;
+}
+
+/*================ WHATSAPP ================*/
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:70px;
+    height:70px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:35px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.15);
+}
+
+/*================ RESPONSIVE ================*/
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    gap:15px;
+    margin-top:15px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+section h2{
+    font-size:30px;
+}
+
+.producto img{
+    height:300px;
+}
+
+.iconos{
+    flex-wrap:wrap;
+}
+
+}
